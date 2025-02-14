@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Will you be my Valentine?</h1>
+      <span>en inglish pa que practiques</span>
+      <div class="buttons">
+        <button class="yes-button" onclick="handleYesClick()">Yes</button>
+        <button class="no-button" onclick="handleNoClick()">No</button>
+      </div>
+      <div class="img_container">
+        <img src="./wait_img.png" />
+      </div>
+
+      <!-- Audio Player -->
+      <div class="audio-controls">
+        <audio id="background-audio" loop autoplay>
+          <source src="./wait_music.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <button id="play-pause-btn">🎵</button>
+        <input
+          type="range"
+          id="volume-slider"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

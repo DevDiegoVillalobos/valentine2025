@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #303030, #1a1a1a);
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#message-container {
+  font-size: 1.5rem;
+  color: #fdc9ff;
+  margin-bottom: 20px;
+}
+
+#message-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#message-text.fade-in {
+  opacity: 1;
+}
+
+.img_container img {
+  max-width: 50vw;
+  height: auto;
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.audio-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #fdc9ff;
+  color: #303030;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.audio-controls button:hover {
+  background-color: #b188b3;
+  transform: scale(1.1);
+}
+
+.audio-controls input[type="range"] {
+  width: 100px;
+  cursor: pointer;
+}
